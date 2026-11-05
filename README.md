@@ -4,7 +4,7 @@ Static marketing site for VitalNexus, which builds business automation, AI assis
 
 ## Run locally
 
-It's a single self-contained `index.html` with no build step. Open it in a browser, or serve the folder:
+It's four plain HTML pages (`index.html`, `pricing.html`, `about.html`, `contact.html`) sharing `assets/styles.css` and a small `assets/menu.js` for the phone menu. There's no build step. Open `index.html` in a browser, or serve the folder:
 
 ```sh
 npx serve .

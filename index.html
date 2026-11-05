@@ -3,148 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VitalNexus | Business automation, AI assistants, and data systems</title>
-<meta name="description" content="VitalNexus builds lead follow-up, document processing, data migration, integrations, reporting, and AI assistants for small and mid-sized businesses.">
+<title>VitalNexus | Less busywork for small businesses</title>
+<meta name="description" content="VitalNexus takes repetitive office work off your plate: fast replies to new inquiries, paperwork entered for you, tidy records, and reports in your inbox.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ground:#EEF2F6;
-  --paper:#FFFFFF;
-  --ink:#14213D;
-  --muted:#4A5772;
-  --line:#CFD8E3;
-  --accent:#2447D6;
-  --accent-ink:#FFFFFF;
-  --signal:#F2A93B;
-  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
-  --mono:"IBM Plex Mono",Consolas,monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo{font-family:var(--display);font-weight:700;font-size:22px;color:var(--ink);text-decoration:none}
-.logo img{display:block}
-.nav{display:flex;gap:4px;margin-left:auto;margin-right:20px}
-.nav a{color:#E8EEF7;font-size:16px;font-weight:500;text-decoration:none;padding:10px 14px;border-radius:6px}
-.nav a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:2px;text-underline-offset:6px}
-.btn{display:inline-block;min-height:48px;padding:12px 22px;background:var(--signal);color:var(--ink);font-weight:500;text-decoration:none;border-radius:6px}
-.btn:hover{background:#E09A2B}
-.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-.btn.alt:hover{background:var(--ink);color:var(--paper)}
-
-/* hero */
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:56px 0 88px}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,5.4vw,64px);line-height:1.04;letter-spacing:-.02em;margin:0 0 20px}
-.lede{font-size:20px;color:var(--muted);max-width:34em;margin:0 0 28px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-
-/* the hero visual: messy input becomes a clean record */
-.flow{display:flex;flex-direction:column;gap:14px}
-.doc{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 18px;transform:rotate(-1.5deg);box-shadow:0 1px 0 var(--line)}
-.doc b{font-family:var(--mono);font-weight:400;font-size:13px;color:var(--muted)}
-.doc p{margin:8px 0 0;font-size:15px;line-height:1.45;color:var(--ink)}
-.arrow{align-self:center;color:var(--accent)}
-.rec{background:var(--ink);color:#E8EEF7;border-radius:6px;padding:16px 18px;font-family:var(--mono);font-size:13.5px;line-height:1.75;overflow-x:auto}
-.rec span{color:var(--signal)}
-.rec i{font-style:normal;color:#9FB0CC}
-
-/* sections */
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 12px}
-.sub{color:var(--muted);max-width:36em;margin:0 0 40px}
-.services{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
-.svc{padding:24px 0;border-top:1px solid var(--line)}
-.svc h3{font-family:var(--display);font-weight:700;font-size:22px;margin:0 0 6px}
-.svc p{margin:0;color:var(--muted)}
-.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:14px}
-.steps li::before{content:counter(s);font-family:var(--mono);font-size:14px;color:var(--accent)}
-.steps h3{font-family:var(--display);font-size:20px;margin:6px 0}
-.steps p{margin:0;color:var(--muted);font-size:16px}
-.stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.stack span{font-family:var(--mono);font-size:14px;border:1px solid var(--line);background:var(--paper);padding:6px 12px;border-radius:4px}
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.tier{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px}
-.tier h3{font-family:var(--display);font-weight:700;font-size:22px;margin:0 0 4px}
-.tier .price{font-family:var(--mono);font-size:16px;color:var(--accent);margin:0 0 12px}
-.tier p{margin:0;color:var(--muted);font-size:16px}
-.note{color:var(--muted);max-width:36em;margin:28px 0 0}
-.contact{background:var(--ink);color:#E8EEF7;border-top:0}
-.contact h2{color:#fff}
-.contact .sub{color:#B7C4DA}
-.contact .btn{background:var(--signal);color:var(--ink)}
-.contact .btn:hover{background:#FFC25E}
-footer{padding:28px 0;color:var(--muted);font-size:15px}
-
-/* dark hero band */
-.band{background:var(--ink);color:#E8EEF7}
-.band .logo{color:#fff}
-.band h1{color:#fff}
-.band .lede{color:#B7C4DA}
-.band .btn.alt{color:#fff;border-color:#fff}
-.band .btn.alt:hover{background:#fff;color:var(--ink)}
-.band .rec{background:#1D2F5E}
-.band .arrow{color:var(--signal)}
-#services{border-top:0}
-
-@media (max-width:820px){
-  .hero{grid-template-columns:1fr;gap:36px;padding-bottom:56px}
-  .services{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .tiers{grid-template-columns:1fr}
-  .nav{display:none}
-}
-@media (max-width:520px){
-  .steps{grid-template-columns:1fr}
-  body{font-size:17px}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/menu.js" defer></script>
 </head>
 <body>
 <div class="band">
 <div class="wrap">
-  <header>
-    <a class="logo" href="#top"><img src="assets/logo-header.png" alt="VitalNexus" width="75" height="60"></a>
-    <nav class="nav" aria-label="Main">
-      <a href="#services">Services</a>
-      <a href="#process">How it works</a>
-      <a href="#pricing">Pricing</a>
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="assets/logo-header.png" alt="VitalNexus" width="75" height="60"></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a class="btn" href="#contact">Book a call</a>
+    <a class="btn" href="https://calendly.com/rharvin1986/30min">Book a call</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   </header>
 
   <main id="top">
     <div class="hero">
       <div>
-        <h1>Stop retyping data. Let your tools talk to each other.</h1>
-        <p class="lede">VitalNexus builds the automations, integrations, and AI assistants that remove repetitive work from your business, then hands you something you can run without us.</p>
+        <h1>Stop retyping. Let the busywork run itself.</h1>
+        <p class="lede">VitalNexus sets up simple systems that handle the repetitive office work in your business, like answering new inquiries, entering invoices, and sending reports. Then we hand it over so you can keep it running without us.</p>
         <div class="cta">
-          <a class="btn" href="#contact">Book a free 30-minute call</a>
-          <a class="btn alt" href="#services">See what we build</a>
+          <a class="btn" href="https://calendly.com/rharvin1986/30min">Book a free 30-minute call</a>
+          <a class="btn alt" href="#services">See what we do</a>
         </div>
       </div>
-      <div class="flow" aria-label="Example: an emailed invoice becomes a structured database record">
-        <div class="doc">
-          <b>Invoice_FINAL_v3.pdf</b>
-          <p>Hi, attached is our invoice #2291 for March, $1,840 due Apr 15. Thanks, Dana at Brightline Supply</p>
+      <div class="ba" aria-label="Example: before and after VitalNexus">
+        <div class="ba-card ba-before">
+          <p class="tag">Before</p>
+          <p class="title">Retyping an invoice by hand</p>
+          <p>Copying the company name, amount, and due date into your books, one invoice at a time.</p>
         </div>
-        <svg class="arrow" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 3v20m0 0l-7-7m7 7l7-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div class="rec">
-          <i>invoices</i> &rarr; new row<br>
-          vendor: <span>"Brightline Supply"</span><br>
-          number: <span>2291</span><br>
-          amount: <span>1840.00</span><br>
-          due: <span>2026-04-15</span><br>
-          status: <span>"needs approval"</span>
+        <svg class="ba-arrow" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 3v20m0 0l-7-7m7 7l7-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="ba-card ba-after">
+          <p class="tag">After</p>
+          <p class="title">It's entered for you, ready to approve</p>
+          <p>The details are filled in from the invoice as soon as it arrives.</p>
+          <div class="ba-row">
+            <span>Brightline Supply &middot; $1,840 &middot; due April 15</span>
+            <span class="pill">Ready to approve</span>
+          </div>
         </div>
       </div>
     </div>
@@ -153,71 +62,47 @@ footer{padding:28px 0;color:var(--muted);font-size:15px}
 </div>
 
 <div class="wrap">
-  <section id="services">
-    <h2>What we build</h2>
-    <p class="sub">Six services, each scoped to a fixed deliverable so you know what you're getting before work starts.</p>
+  <section id="services" class="first">
+    <h2>What we do</h2>
+    <p class="sub">Six ways we take repetitive work off your plate. Each one has a fixed price, agreed before we start.</p>
     <div class="services">
       <div class="svc">
-        <h3>Lead capture and follow-up</h3>
-        <p>Web forms that feed your CRM and trigger email and text sequences, so no inquiry sits unanswered.</p>
+        <h3>Never miss a lead</h3>
+        <p>New inquiries get a fast reply and automatic follow-up by email or text.</p>
       </div>
       <div class="svc">
-        <h3>Document processing</h3>
-        <p>Invoices, intake forms, and contracts read automatically and turned into structured data you can search and report on.</p>
+        <h3>Stop retyping paperwork</h3>
+        <p>Invoices, forms, and contracts are read and entered for you.</p>
       </div>
       <div class="svc">
-        <h3>Data cleanup and migration</h3>
-        <p>Spreadsheets moved into a real database, duplicates removed, and your systems kept in sync.</p>
+        <h3>Clean up your records</h3>
+        <p>Your spreadsheets organized, duplicates removed, everything in one place.</p>
       </div>
       <div class="svc">
-        <h3>API integrations</h3>
-        <p>Connections between the tools you already pay for that don't work together out of the box.</p>
+        <h3>Make your software work together</h3>
+        <p>The tools you already pay for share information automatically.</p>
       </div>
       <div class="svc">
-        <h3>Reporting automation</h3>
-        <p>Weekly KPI emails and live dashboards built from your own data, delivered without anyone building a spreadsheet.</p>
+        <h3>Get reports without the work</h3>
+        <p>A weekly summary in your inbox and a simple view of how the business is doing.</p>
       </div>
       <div class="svc">
-        <h3>AI assistants over your company data</h3>
-        <p>A chat assistant for your staff or customers that answers from your own documents.</p>
+        <h3>A helper that knows your business</h3>
+        <p>An assistant that answers staff or customer questions from your own documents.</p>
       </div>
     </div>
   </section>
 
   <section id="process">
     <h2>How a project works</h2>
-    <p class="sub">Short, predictable, and documented.</p>
+    <p class="sub">Simple, predictable, and explained in plain English.</p>
     <ol class="steps">
-      <li><h3>Discovery call</h3><p>You describe the task that eats your week. We confirm it's worth automating.</p></li>
-      <li><h3>Fixed-scope quote</h3><p>A written scope and a fixed price.</p></li>
-      <li><h3>Build and test</h3><p>We build on your real data and test with you before anything goes live.</p></li>
-      <li><h3>Handoff</h3><p>Documentation, a walkthrough, and optional monthly support.</p></li>
+      <li><h3>A free call</h3><p>You tell us about the task that eats up your week. We tell you honestly whether we can take it off your plate.</p></li>
+      <li><h3>A fixed written quote</h3><p>You get a written plan and one fixed price before any work starts.</p></li>
+      <li><h3>We set it up and test it with you</h3><p>We use your own paperwork and check everything with you before it goes live.</p></li>
+      <li><h3>We hand it over</h3><p>You get simple instructions, a walkthrough, and optional monthly support.</p></li>
     </ol>
-    <div class="stack" aria-label="Tools we use">
-      <span>Claude</span><span>n8n</span><span>PostgreSQL</span><span>Node.js</span>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <div class="tiers">
-      <div class="tier">
-        <h3>Small</h3>
-        <p class="price">$500-$1,000</p>
-        <p>One workflow connecting 1-2 tools, like a lead form that sends follow-up emails.</p>
-      </div>
-      <div class="tier">
-        <h3>Medium</h3>
-        <p class="price">$1,000-$2,500</p>
-        <p>Multi-step workflows with a database or reporting, like invoice processing or a weekly KPI dashboard.</p>
-      </div>
-      <div class="tier">
-        <h3>Large</h3>
-        <p class="price">$2,500-$6,000+</p>
-        <p>Custom logic, document processing at scale, or an AI assistant over your company data.</p>
-      </div>
-    </div>
-    <p class="note">Every project gets a fixed written quote after a free discovery call. Final price depends on complexity and the tools involved.</p>
+    <p class="note"><a href="pricing.html">See pricing</a></p>
   </section>
 </div>
 
