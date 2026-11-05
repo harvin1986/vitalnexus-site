@@ -66,6 +66,12 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,40px);l
 .steps p{margin:0;color:var(--muted);font-size:16px}
 .stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .stack span{font-family:var(--mono);font-size:14px;border:1px solid var(--line);background:var(--paper);padding:6px 12px;border-radius:4px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tier{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:24px}
+.tier h3{font-family:var(--display);font-weight:700;font-size:22px;margin:0 0 4px}
+.tier .price{font-family:var(--mono);font-size:16px;color:var(--accent);margin:0 0 12px}
+.tier p{margin:0;color:var(--muted);font-size:16px}
+.note{color:var(--muted);max-width:36em;margin:28px 0 0}
 .contact{background:var(--ink);color:#E8EEF7;border-top:0}
 .contact h2{color:#fff}
 .contact .sub{color:#B7C4DA}
@@ -88,6 +94,7 @@ footer{padding:28px 0;color:var(--muted);font-size:15px}
   .hero{grid-template-columns:1fr;gap:36px;padding-bottom:56px}
   .services{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
+  .tiers{grid-template-columns:1fr}
 }
 @media (max-width:520px){
   .steps{grid-template-columns:1fr}
@@ -171,13 +178,35 @@ footer{padding:28px 0;color:var(--muted);font-size:15px}
     <p class="sub">Short, predictable, and documented.</p>
     <ol class="steps">
       <li><h3>Discovery call</h3><p>You describe the task that eats your week. We confirm it's worth automating.</p></li>
-      <li><h3>Fixed-scope quote</h3><p>A written scope and price. Projects start at [YOUR STARTING PRICE].</p></li>
+      <li><h3>Fixed-scope quote</h3><p>A written scope and a fixed price.</p></li>
       <li><h3>Build and test</h3><p>We build on your real data and test with you before anything goes live.</p></li>
       <li><h3>Handoff</h3><p>Documentation, a walkthrough, and optional monthly support.</p></li>
     </ol>
     <div class="stack" aria-label="Tools we use">
       <span>Claude</span><span>n8n</span><span>PostgreSQL</span><span>Node.js</span>
     </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Small</h3>
+        <p class="price">$500-$1,000</p>
+        <p>One workflow connecting 1-2 tools, like a lead form that sends follow-up emails.</p>
+      </div>
+      <div class="tier">
+        <h3>Medium</h3>
+        <p class="price">$1,000-$2,500</p>
+        <p>Multi-step workflows with a database or reporting, like invoice processing or a weekly KPI dashboard.</p>
+      </div>
+      <div class="tier">
+        <h3>Large</h3>
+        <p class="price">$2,500-$6,000+</p>
+        <p>Custom logic, document processing at scale, or an AI assistant over your company data.</p>
+      </div>
+    </div>
+    <p class="note">Every project gets a fixed written quote after a free discovery call. Final price depends on complexity and the tools involved.</p>
   </section>
 </div>
 
