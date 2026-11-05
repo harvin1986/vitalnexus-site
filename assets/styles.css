@@ -92,13 +92,14 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,40px);l
 .note{color:var(--muted);max-width:36em;margin:28px 0 32px}
 
 /* about */
-.about{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start}
+.bio{margin-top:28px}
+.bio h3{font-family:var(--display);font-weight:700;font-size:22px;margin:0 0 10px}
+.bio p{margin:0 0 16px;color:var(--muted)}
+.bio p:last-child{margin-bottom:0}
 .promises{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
 .promises li{padding:20px 0;border-top:1px solid var(--line)}
 .promises h3{font-family:var(--display);font-weight:700;font-size:20px;margin:0 0 4px}
 .promises p{margin:0;color:var(--muted);font-size:16px}
-.placeholder{background:#FFF6E5;border:2px dashed var(--signal);border-radius:6px;padding:16px 18px;color:var(--ink);font-weight:500}
-.photo.placeholder{aspect-ratio:1;display:flex;align-items:center;justify-content:center;text-align:center}
 
 /* contact */
 .reach{display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:24px}
@@ -117,8 +118,6 @@ footer{padding:28px 0;color:var(--muted);font-size:15px}
   .steps{grid-template-columns:1fr 1fr}
   .steps.three{grid-template-columns:1fr}
   .tiers{grid-template-columns:1fr}
-  .about{grid-template-columns:1fr;gap:28px}
-  .photo.placeholder{max-width:200px}
 
   /* phone navigation: links collapse behind the Menu button (only when JS runs) */
   .js .menu-btn{display:inline-block}
