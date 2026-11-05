@@ -32,6 +32,9 @@ a{color:var(--accent)}
 header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
 .logo{font-family:var(--display);font-weight:700;font-size:22px;color:var(--ink);text-decoration:none}
 .logo img{display:block}
+.nav{display:flex;gap:4px;margin-left:auto;margin-right:20px}
+.nav a{color:#E8EEF7;font-size:16px;font-weight:500;text-decoration:none;padding:10px 14px;border-radius:6px}
+.nav a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--signal);text-decoration-thickness:2px;text-underline-offset:6px}
 .btn{display:inline-block;min-height:48px;padding:12px 22px;background:var(--signal);color:var(--ink);font-weight:500;text-decoration:none;border-radius:6px}
 .btn:hover{background:#E09A2B}
 .btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
@@ -97,6 +100,7 @@ footer{padding:28px 0;color:var(--muted);font-size:15px}
   .services{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .tiers{grid-template-columns:1fr}
+  .nav{display:none}
 }
 @media (max-width:520px){
   .steps{grid-template-columns:1fr}
@@ -110,6 +114,11 @@ footer{padding:28px 0;color:var(--muted);font-size:15px}
 <div class="wrap">
   <header>
     <a class="logo" href="#top"><img src="assets/logo-header.png" alt="VitalNexus" width="75" height="60"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
     <a class="btn" href="#contact">Book a call</a>
   </header>
 
